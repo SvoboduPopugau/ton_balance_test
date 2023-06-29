@@ -10,7 +10,6 @@ app = Flask(__name__)
 def get_ton_balance():
     try:
         ton_address = request.args.get('address')
-        print(ton_address)
         if not ton_address:
             return jsonify({'error': 'Address parameter is missing.'}), 400
 
